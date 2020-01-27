@@ -10,4 +10,4 @@ install:
     - pip install ansible
 
 script:
-    - ansible-playbook  playbook.yml --connection=local --sudo
+    - ansible-playbook  playbook.yml --connection=local 
