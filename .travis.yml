@@ -1,6 +1,13 @@
-dist: bionic
+language: python
 
+sudo: required
+
+
+before_install:
+    - sudo apt-get upadate -qq
+
+install:
+    - pip install ansible
 
 script:
-    - python second.py
-    - apt-get install ansible
+    - ansible-playbook  playbook.yml --connection=local --sudo
