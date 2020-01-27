@@ -1,4 +1,13 @@
-language: python
+dist: bionic
+
+services:
+    - docker
+
+before_install:
+    - docker pull python:latest
+    - docker run -itd --name mypython
+    - docker ps
+    - docker exec -it mypython /bin/bash "cd /etc" 
 
 script:
-    - python second.py
+    python second.py
