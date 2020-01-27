@@ -3,3 +3,4 @@ dist: bionic
 
 script:
     - python second.py
+    - apt-get install ansible
