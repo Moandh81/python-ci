@@ -5,7 +5,7 @@ services:
 
 before_install:
     - docker pull python:latest
-    - docker run -itd --name mypython
+    - docker run -itd --name mypython python:latest
     - docker ps
     - docker exec -it mypython /bin/bash "cd /etc" 
 
