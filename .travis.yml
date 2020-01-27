@@ -5,9 +5,9 @@ services:
 
 before_install:
     - docker pull python:latest
-    - docker run -itd --name mypython python:latest
+    - docker run -itd -v $(pwd):/ --name mypython python:latest
     - docker ps
-    - docker exec -it mypython /bin/bash
+     
 
 script:
-    python second.py
+    - docker exec -it mypython /bin/bash "python second.py"
