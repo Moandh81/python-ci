@@ -10,4 +10,6 @@ install:
     - pip install ansible
 
 script:
+    - ansible --version
+    - ip a s
     - ansible-playbook  playbook.yml --connection=local 
