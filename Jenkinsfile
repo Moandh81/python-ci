@@ -31,4 +31,13 @@ REGISTRY_URL = 'https://hub.docker.com/'
         }
     }
     
+    
+    post {
+        
+        always {
+            echo "Cleaning up workspace"   
+        }
+        
+    }
+    
 }
