@@ -26,7 +26,7 @@ REGISTRY_URL = 'https://hub.docker.com/'
                echo 'this is the Deploy step'
                 sh 'ls -lh'
                 sh 'docker --version'
-                sh ' docker login $REGISTRY_URL --username $REGISTRY_CREDENTIALS_USR --password $REGISTRY_CREDENTIALS_PSW'
+                sh ' docker login --username $REGISTRY_CREDENTIALS_USR --password $REGISTRY_CREDENTIALS_PSW'
             }
         }
     }
@@ -34,7 +34,7 @@ REGISTRY_URL = 'https://hub.docker.com/'
     
     post {
         
-        always {
+        success {
             echo "Cleaning up workspace"   
         }
         
