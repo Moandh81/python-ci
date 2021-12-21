@@ -18,6 +18,7 @@ pipeline {
                
                echo 'this is the Deploy step'
                 sh 'ls -lh'
+                sh 'docker --version'
             }
         }
     }
