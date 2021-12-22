@@ -14,14 +14,7 @@ pipeline {
             
         }
         
-        
-        stage('Static Code Analysis'){
-            
-            steps {
-    sh 'mvn clean verify sonar:sonar -Dsonar.projectName=jenkins-sonarqube    -Dsonar.projectKey=jenkins-sonarqube -Dsonar.projectVersion=$BUILD_NUMBER';
-                
-            }
-}
+
             
            
         
