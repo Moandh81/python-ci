@@ -11,6 +11,8 @@ pipeline {
                 sh 'ls -lh'
             }
             
+        }
+            
             stage ('Sonarqube') {
                 
                 steps {
@@ -29,7 +31,7 @@ pipeline {
                 }
                 
             }
-        }
+        
         stage('Test') { 
             steps {
                 echo 'this is the build step'
